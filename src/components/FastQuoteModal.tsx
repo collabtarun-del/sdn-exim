@@ -32,13 +32,13 @@ export const FastQuoteModal: React.FC<FastQuoteModalProps> = ({
   const handleSendWhatsApp = () => {
     const valDisplay = hasNumericPrice
       ? `${currency === 'USD' ? '$' : '₹'}${estimatedTotal.toLocaleString()}`
-      : '[Quote on Request]';
+      : 'Price on Request';
     const text = encodeURIComponent(
-      `Hello SDN International Exim,\n\nI am requesting an instant ${incoterm} quote:\n` +
+      `Hello SDN International Exim,\n\nI am requesting a quote:\n` +
       `• Commodity: ${selectedCommodity.name}\n` +
       `• Target Volume: ${quantityMT} MT\n` +
       `• Destination: ${targetPort}\n` +
-      `• Estimated Value: ${valDisplay}\n\nPlease confirm container stuffing schedule.`
+      `• Price Indication: ${valDisplay}\n\nPlease share current price quote and container stuffing schedule.`
     );
     window.open(`https://wa.me/919752780042?text=${text}`, '_blank');
   };
@@ -49,14 +49,14 @@ export const FastQuoteModal: React.FC<FastQuoteModalProps> = ({
         <div className="flex items-start justify-between border-b border-outline-variant/20 pb-3">
           <div className="flex items-center gap-2.5">
             <div className="w-10 h-10 rounded-xl bg-secondary text-on-secondary flex items-center justify-center">
-              <span className="material-symbols-outlined text-[24px]">bolt</span>
+              <span className="material-symbols-outlined text-[24px]">calculate</span>
             </div>
             <div>
               <h3 className="font-serif text-lg font-bold text-primary">
-                Instant FOB / CIF Estimator
+                FOB / CIF Quote Calculator
               </h3>
               <p className="text-xs text-on-surface-variant">
-                Live automated spot benchmark calculator
+                Configure container volume and request export pricing
               </p>
             </div>
           </div>
@@ -167,7 +167,7 @@ export const FastQuoteModal: React.FC<FastQuoteModalProps> = ({
                 </>
               ) : (
                 <span className="text-sm font-sans text-secondary-container font-semibold">
-                  [Rate Pending Configuration]
+                  Price on Request
                 </span>
               )}
             </span>
@@ -178,14 +178,14 @@ export const FastQuoteModal: React.FC<FastQuoteModalProps> = ({
               Commodity:{' '}
               {hasNumericPrice
                 ? `${currency === 'USD' ? '$' : '₹'}${unitRate.toLocaleString()}/MT`
-                : String(rawMin || '[Enter Price]')}
+                : 'Price on Request'}
             </span>
             <span>
               Ocean Freight:{' '}
               {incoterm === 'CIF'
                 ? hasNumericPrice
                   ? `${currency === 'USD' ? '$' : '₹'}${oceanFreight.toLocaleString()}`
-                  : 'Included in CIF'
+                  : 'Included in CIF Quote'
                 : 'Excluded (FOB)'}
             </span>
           </div>

@@ -31,13 +31,13 @@ export const ContactDesk: React.FC<ContactDeskProps> = ({ language }) => {
           </div>
           <div className="flex flex-col">
             <span className="font-serif text-base md:text-lg font-bold text-primary">
-              Director of International Operations
+              Export Operations Desk
             </span>
             <span className="text-xs text-secondary font-semibold">
-              SDN International Exim Trade Desk
+              SDN International Exim
             </span>
             <span className="text-[11px] text-on-surface-variant mt-0.5">
-              Speaks English, Hindi, Gujarati, Arabic • APEDA &amp; Spices Board Liaison
+              Merchant Exporter • Thandla, Jhabua, Madhya Pradesh, India
             </span>
           </div>
         </div>
@@ -83,7 +83,7 @@ export const ContactDesk: React.FC<ContactDeskProps> = ({ language }) => {
           <a
             className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-primary transition-all active:scale-98 border border-outline-variant/20"
             href="mailto:narottampatidar19@gmail.com"
-            title="Email: [aapki email]"
+            title="Email: [AAPKI EMAIL]"
           >
             <div className="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-xs">
               <span className="material-symbols-outlined text-[18px]">mail</span>
@@ -93,7 +93,7 @@ export const ContactDesk: React.FC<ContactDeskProps> = ({ language }) => {
                 Export Desk Email
               </span>
               <span className="text-sm font-bold truncate text-primary font-mono">
-                [aapki email]
+                [AAPKI EMAIL]
               </span>
             </div>
           </a>

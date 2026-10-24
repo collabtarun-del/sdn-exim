@@ -47,10 +47,10 @@ export const ProformaModal: React.FC<ProformaModalProps> = ({
               </h2>
             </div>
             <p className="text-[10px] text-gray-600 mt-1">
-              Registered Export House • APEDA Reg: APEDA/REG/RCMC/2026/8912 • IEC: 0308019482
+              Merchant Exporter • Commercial Division • Thandla, Jhabua, Madhya Pradesh, India
             </p>
             <p className="text-[10px] text-gray-600">
-              Corporate Office: Thandla, Jhabua, Madhya Pradesh, India • [aapki email] • WhatsApp: +91 9752780042
+              Corporate Office: Thandla, Jhabua, Madhya Pradesh, India • Email: [AAPKI EMAIL] • WhatsApp/Phone: +91 9752780042
             </p>
           </div>
 
@@ -134,10 +134,10 @@ export const ProformaModal: React.FC<ProformaModalProps> = ({
                   {tons} MT
                 </td>
                 <td className="p-2.5 text-right font-medium">
-                  {hasNumericPrice ? `$${pricePerTon.toLocaleString()}/MT` : String(rawPrice || '[Enter Rate]')}
+                  {hasNumericPrice ? `$${pricePerTon.toLocaleString()}/MT` : 'Price on Request'}
                 </td>
                 <td className="p-2.5 text-right font-bold text-gray-900">
-                  {hasNumericPrice ? `$${subtotal.toLocaleString()}` : '[To Be Calculated]'}
+                  {hasNumericPrice ? `$${subtotal.toLocaleString()}` : 'Price on Request'}
                 </td>
               </tr>
 
@@ -169,7 +169,7 @@ export const ProformaModal: React.FC<ProformaModalProps> = ({
                   Total Contract Value ({quote.incotermPref} Basis):
                 </td>
                 <td className="p-3 text-right text-primary text-base font-serif">
-                  {hasNumericPrice ? `$${grandTotal.toLocaleString()} USD` : '[Contract Value Pending Rate Finalization]'}
+                  {hasNumericPrice ? `$${grandTotal.toLocaleString()} USD` : 'Price on Request'}
                 </td>
               </tr>
             </tfoot>

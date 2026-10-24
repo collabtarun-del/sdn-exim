@@ -41,7 +41,7 @@ export const ShipmentTrackerModal: React.FC<ShipmentTrackerModalProps> = ({ onCl
                 Container Bill of Lading Tracker
               </h3>
               <p className="text-xs text-on-surface-variant">
-                Live port terminal telemetry &amp; maritime GPS tracking
+                Consignment movement &amp; export dispatch logs
               </p>
             </div>
           </div>

@@ -16,46 +16,15 @@ export const Footer: React.FC<FooterProps> = ({
   return (
     <footer className="w-full bg-surface-container-high/90 mt-12 pt-10 pb-28 md:pb-12 px-4 md:px-8 border-t border-outline-variant/30">
       <div className="max-w-4xl mx-auto flex flex-col gap-8">
-        {/* Statutory Certifications Mini Grid */}
-        <div className="flex flex-col gap-2">
-          <span className="text-xs text-secondary uppercase tracking-widest font-bold">
-            Statutory Certifications
+        {/* Merchant Exporter Summary */}
+        <div className="flex flex-col gap-1.5 bg-surface-container-lowest/90 p-4 rounded-xl shadow-xs border border-outline-variant/20">
+          <span className="text-xs text-secondary uppercase tracking-widest font-bold flex items-center gap-1.5">
+            <span className="material-symbols-outlined text-[16px]">business</span>
+            SDN International Exim
           </span>
-          <h3 className="font-serif text-lg md:text-xl text-primary font-semibold">
-            Trade Verification &amp; Compliance
-          </h3>
-          <div className="grid grid-cols-5 gap-2 pt-1">
-            <div className="h-12 rounded-xl bg-surface-container-lowest flex flex-col items-center justify-center text-center p-1 shadow-xs border border-outline-variant/20">
-              <span className="text-xs text-primary font-bold leading-none">APEDA</span>
-              <span className="text-[8px] text-on-surface-variant leading-none mt-1">
-                Reg. Exporter
-              </span>
-            </div>
-            <div className="h-12 rounded-xl bg-surface-container-lowest flex flex-col items-center justify-center text-center p-1 shadow-xs border border-outline-variant/20">
-              <span className="text-xs text-primary font-bold leading-none">SPICES BD</span>
-              <span className="text-[8px] text-on-surface-variant leading-none mt-1">
-                Govt. India
-              </span>
-            </div>
-            <div className="h-12 rounded-xl bg-surface-container-lowest flex flex-col items-center justify-center text-center p-1 shadow-xs border border-outline-variant/20">
-              <span className="text-xs text-primary font-bold leading-none">FSSAI</span>
-              <span className="text-[8px] text-on-surface-variant leading-none mt-1">
-                Central Lic.
-              </span>
-            </div>
-            <div className="h-12 rounded-xl bg-surface-container-lowest flex flex-col items-center justify-center text-center p-1 shadow-xs border border-outline-variant/20">
-              <span className="text-xs text-primary font-bold leading-none">IEC</span>
-              <span className="text-[8px] text-on-surface-variant leading-none mt-1">
-                DGFT Valid
-              </span>
-            </div>
-            <div className="h-12 rounded-xl bg-surface-container-lowest flex flex-col items-center justify-center text-center p-1 shadow-xs border border-outline-variant/20">
-              <span className="text-xs text-primary font-bold leading-none">GSTN</span>
-              <span className="text-[8px] text-on-surface-variant leading-none mt-1">
-                Verified
-              </span>
-            </div>
-          </div>
+          <p className="text-xs text-on-surface-variant leading-relaxed">
+            Merchant exporter based in Thandla, Jhabua, Madhya Pradesh, India. Facilitating global container shipments of Indian spices, grains, and agricultural produce.
+          </p>
         </div>
 
         {/* Primary Outbound Hubs */}
@@ -130,7 +99,7 @@ export const Footer: React.FC<FooterProps> = ({
             <span className="hidden sm:inline text-outline-variant">•</span>
             <span className="flex items-center gap-1 font-mono">
               <span className="material-symbols-outlined text-[16px] text-secondary">mail</span>
-              <span>[aapki email]</span>
+              <span>[AAPKI EMAIL]</span>
             </span>
             <span className="hidden sm:inline text-outline-variant">•</span>
             <span className="flex items-center gap-1 font-mono">
@@ -159,7 +128,7 @@ export const Footer: React.FC<FooterProps> = ({
             <a
               className="w-10 h-10 flex items-center justify-center rounded-xl bg-surface hover:text-primary transition-colors shadow-xs"
               href="mailto:narottampatidar19@gmail.com"
-              title="Email: [aapki email]"
+              title="Email: [AAPKI EMAIL]"
             >
               <span className="material-symbols-outlined text-[20px]">mail</span>
             </a>

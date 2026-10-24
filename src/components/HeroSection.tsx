@@ -47,13 +47,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </svg>
 
       <div className="relative z-10 flex flex-col gap-4 max-w-4xl mx-auto">
-        {/* Statutory Credential Ribbon */}
+        {/* Merchant Exporter Location Badge */}
         <div className="self-start inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-primary-fixed shadow-sm border border-primary-fixed/20">
           <span className="material-symbols-outlined text-[15px] text-secondary-container">
-            verified
+            location_on
           </span>
           <span className="text-xs tracking-wide uppercase font-semibold">
-            {t.govRecognized}
+            Merchant Exporter • Thandla, Jhabua, MP, India
           </span>
         </div>
 

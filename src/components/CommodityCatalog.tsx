@@ -46,27 +46,20 @@ export const CommodityCatalog: React.FC<CommodityCatalogProps> = ({
     const min = isUsd ? commodity.priceUsdMin : commodity.priceInrMin;
     const max = isUsd ? commodity.priceUsdMax : commodity.priceInrMax;
 
-    const minIsStr = typeof min === 'string';
-    const maxIsStr = typeof max === 'string';
+    const minNum = typeof min === 'number' ? min : parseFloat(String(min).replace(/[^0-9.]/g, ''));
+    const maxNum = typeof max === 'number' ? max : parseFloat(String(max).replace(/[^0-9.]/g, ''));
 
-    if (minIsStr || maxIsStr) {
-      if (min === max || !max) {
-        return { price: `${min}`, unit: commodity.unit };
-      }
-      return { price: `${min} - ${max}`, unit: commodity.unit };
-    }
-
-    if (typeof min === 'number' && typeof max === 'number') {
+    if (!isNaN(minNum) && minNum > 0) {
       const prefix = isUsd ? '$' : '₹';
       const locale = isUsd ? 'en-US' : 'en-IN';
       const display =
-        max !== min
-          ? `${prefix}${min.toLocaleString(locale)} - ${prefix}${max.toLocaleString(locale)}`
-          : `${prefix}${min.toLocaleString(locale)}`;
+        !isNaN(maxNum) && maxNum > 0 && maxNum !== minNum
+          ? `${prefix}${minNum.toLocaleString(locale)} - ${prefix}${maxNum.toLocaleString(locale)}`
+          : `${prefix}${minNum.toLocaleString(locale)}`;
       return { price: display, unit: commodity.unit };
     }
 
-    return { price: '[Enter Price]', unit: commodity.unit };
+    return { price: 'Price on Request', unit: commodity.unit };
   };
 
   const getWhatsAppLink = (commodity: Commodity) => {
@@ -409,7 +402,7 @@ export const CommodityCatalog: React.FC<CommodityCatalogProps> = ({
           info
         </span>
         <p className="text-xs text-on-surface-variant leading-relaxed">
-          <strong>Commercial Notice:</strong> Spot rates shown above are indicative FOB/CIF guidelines based on current port benchmark filings. Contract prices vary dynamically based on target incoterms, customized packaging graphics, ocean freight fluctuation, and order quantity scale.
+          <strong>Commercial Notice:</strong> Prices are provided upon inquiry and confirmed via formal Proforma Invoice. Rates vary based on target incoterms (FOB/CIF), discharge port, custom packaging specifications, current ocean freight, and consignment volume.
         </p>
       </div>
     </section>

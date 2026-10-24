@@ -33,10 +33,10 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ language }) => {
               </span>
             </div>
             <h3 className="font-serif text-base font-bold text-primary">
-              Direct Farm-Gate Procurement
+              Direct Farm & Mandi Sourcing
             </h3>
             <p className="text-xs text-on-surface-variant leading-relaxed">
-              No multi-tiered mandi middleman markups. We source harvested produce directly through contract farmer clusters in Nashik, Guntur, and Saurashtra to ensure unmatched cost-efficiency.
+              We source agricultural commodities directly from established farm clusters and primary mandis across India to ensure optimum quality and competitive pricing for global buyers.
             </p>
           </div>
 
@@ -48,10 +48,10 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ language }) => {
               </span>
             </div>
             <h3 className="font-serif text-base font-bold text-primary">
-              ISO &amp; APEDA Assured Quality
+              Export Quality &amp; Inspection Assured
             </h3>
             <p className="text-xs text-on-surface-variant leading-relaxed">
-              Every shipment passes multi-residue pesticide tests, phytosanitary fumigation certification, and voluntary SGS or Bureau Veritas pre-shipment sampling before port entry.
+              Shipments undergo stringent quality sorting, phytosanitary fumigation, and optional third-party pre-shipment inspection (such as SGS or Bureau Veritas) before container stuffing.
             </p>
           </div>
 

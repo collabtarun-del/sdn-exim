@@ -39,11 +39,11 @@ export const LiveRateEditorModal: React.FC<LiveRateEditorModalProps> = ({
     } catch {
       // ignore storage error
     }
-    setSyncStatus('Changes synced across all global buyer screens via Webhook! (HTTP 200)');
+    setSyncStatus('Changes saved successfully! Product cards and quotes updated.');
     setTimeout(() => {
       setSyncStatus(null);
       onClose();
-    }, 1200);
+    }, 1000);
   };
 
   return (
@@ -183,7 +183,7 @@ export const LiveRateEditorModal: React.FC<LiveRateEditorModalProps> = ({
         {/* Footer */}
         <div className="flex items-center justify-between pt-2 border-t border-outline-variant/20">
           <div className="text-[11px] text-outline">
-            Auto-sync interval: 30 seconds • Google Sheets API v4 Webhook Trigger
+            Changes are saved to your browser session and immediately update all catalog cards.
           </div>
 
           <div className="flex items-center gap-2">
@@ -197,8 +197,8 @@ export const LiveRateEditorModal: React.FC<LiveRateEditorModalProps> = ({
               onClick={handleSaveAndSync}
               className="px-5 py-2 rounded-xl bg-secondary hover:bg-secondary/90 text-on-secondary text-xs font-bold transition-all shadow-sm active:scale-95 flex items-center gap-1.5 cursor-pointer"
             >
-              <span className="material-symbols-outlined text-[16px]">sync</span>
-              <span>Sync to Trading Floor</span>
+              <span className="material-symbols-outlined text-[16px]">save</span>
+              <span>Save &amp; Update Catalog</span>
             </button>
           </div>
         </div>

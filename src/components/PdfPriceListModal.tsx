@@ -27,22 +27,22 @@ export const PdfPriceListModal: React.FC<PdfPriceListModalProps> = ({
               </h2>
             </div>
             <p className="text-[10px] text-gray-600 mt-1">
-              Registered Export House • APEDA &amp; Spices Board of India Registered
+              Merchant Exporter • Thandla, Jhabua, Madhya Pradesh, India
             </p>
             <p className="text-[10px] text-gray-500">
-              Corporate Office: Thandla, Jhabua, Madhya Pradesh, India • [aapki email] • WhatsApp: +91 9752780042
+              Corporate Office: Thandla, Jhabua, Madhya Pradesh, India • Email: [AAPKI EMAIL] • WhatsApp/Phone: +91 9752780042
             </p>
           </div>
 
           <div className="text-right">
             <span className="px-2.5 py-1 rounded bg-secondary text-white font-serif text-xs font-bold uppercase tracking-wider block">
-              OFFICIAL EXPORT PRICE SCHEDULE
+              OFFICIAL EXPORT CATALOG
             </span>
             <span className="font-mono text-xs font-bold text-gray-800 block mt-1">
-              HARVEST SEASON 2026
+              SEASON 2026
             </span>
             <span className="text-[10px] text-gray-500 block">
-              Synchronized from: sdn-live-prices-2026
+              SDN International Exim
             </span>
           </div>
         </div>
@@ -102,10 +102,10 @@ export const PdfPriceListModal: React.FC<PdfPriceListModalProps> = ({
                     {currency === 'USD'
                       ? (typeof item.priceUsdMin === 'number' && typeof item.priceUsdMax === 'number'
                           ? `$${item.priceUsdMin} - $${item.priceUsdMax}`
-                          : `${item.priceUsdMin} - ${item.priceUsdMax}`)
+                          : 'Price on Request')
                       : (typeof item.priceInrMin === 'number' && typeof item.priceInrMax === 'number'
                           ? `₹${item.priceInrMin.toLocaleString('en-IN')} - ₹${item.priceInrMax.toLocaleString('en-IN')}`
-                          : `${item.priceInrMin} - ${item.priceInrMax}`)}
+                          : 'Price on Request')}
                     <span className="text-[10px] text-gray-500 font-sans block font-normal">
                       / {item.unit}
                     </span>

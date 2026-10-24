@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Commodity, Currency, Language, QuoteRequest } from './types/commodity';
-import { INITIAL_COMMODITIES, MANDI_TICKER_RATES } from './data/commodities';
+import { INITIAL_COMMODITIES } from './data/commodities';
 import { Header } from './components/Header';
-import { LiveMandiTicker } from './components/LiveMandiTicker';
 import { HeroSection } from './components/HeroSection';
 import { GoogleSheetSyncBanner } from './components/GoogleSheetSyncBanner';
 import { CommodityCatalog } from './components/CommodityCatalog';
@@ -10,7 +9,6 @@ import { TechnicalSpecModal } from './components/TechnicalSpecModal';
 import { StuffingCalculatorModal } from './components/StuffingCalculatorModal';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { ExportRoadmap } from './components/ExportRoadmap';
-import { CertificationsSection } from './components/CertificationsSection';
 import { TradeCorridors } from './components/TradeCorridors';
 import { ClientTestimonials } from './components/ClientTestimonials';
 import { FaqSection } from './components/FaqSection';
@@ -37,7 +35,6 @@ export default function App() {
     }
     return INITIAL_COMMODITIES;
   });
-  const [mandiRates] = useState(MANDI_TICKER_RATES);
   const [lastSyncTime, setLastSyncTime] = useState<string>('2 mins ago');
 
   // Preselected parameters for quote form
@@ -105,28 +102,14 @@ export default function App() {
 
       {/* Main Viewport Container */}
       <main className="flex-1 pt-16 flex flex-col">
-        {/* Top Live Mandi Ticker Strip */}
-        <LiveMandiTicker
-          rates={mandiRates}
-          language={language}
-          onSelectMandiItem={(rate) => {
-            const matched = commodities.find((c) =>
-              c.name.toLowerCase().includes(rate.name.split(' ')[0].toLowerCase())
-            );
-            if (matched) {
-              setSelectedSpecCommodity(matched);
-            }
-          }}
-        />
-
-        {/* Luxury Hero Section */}
+        {/* Hero Section */}
         <HeroSection
           language={language}
           onOpenQuote={() => scrollToSection('quick-quote-section')}
           onScrollToCatalog={() => scrollToSection('catalog-section')}
         />
 
-        {/* Non-Coder Easy Rate Sync Banner */}
+        {/* Product Catalog & Pricing Desk */}
         <GoogleSheetSyncBanner
           language={language}
           onOpenPdfPriceList={() => setIsPdfListOpen(true)}
@@ -148,7 +131,7 @@ export default function App() {
         {/* Why Choose SDN International Exim */}
         <WhyChooseUs language={language} />
 
-        {/* 8-Stage Sovereign Export Roadmap */}
+        {/* 8-Stage Export Workflow Roadmap */}
         <ExportRoadmap
           language={language}
           onRequestSample={() => {
@@ -157,9 +140,6 @@ export default function App() {
             scrollToSection('quick-quote-section');
           }}
         />
-
-        {/* Certifications & Compliance Badges Grid */}
-        <CertificationsSection language={language} />
 
         {/* Global Reach & Shipping Ports */}
         <TradeCorridors language={language} />

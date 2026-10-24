@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
           <div className="flex flex-col truncate">
             <span className="font-serif text-lg text-primary tracking-tight font-bold truncate leading-tight">
-              SDN EXIM
+              SDN International Exim
             </span>
             <span className="text-[10px] text-secondary font-semibold tracking-widest uppercase truncate leading-none">
               {t.brandSubtitle}
