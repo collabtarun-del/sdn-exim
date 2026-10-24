@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #002214;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #0f3827;
+  --color-on-primary-container: #79a28c;
+  --color-primary-fixed: #c1edd3;
+  --color-primary-fixed-dim: #a5d0b8;
+  --color-on-primary-fixed: #002114;
+  --color-on-primary-fixed-variant: #274e3c;
+  
+  --color-secondary: #904d00;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fe932c;
+  --color-on-secondary-container: #663500;
+  --color-secondary-fixed: #ffdcc3;
+  --color-secondary-fixed-dim: #ffb77d;
+  --color-on-secondary-fixed: #2f1500;
+  --color-on-secondary-fixed-variant: #6e3900;
+
+  --color-tertiary: #400400;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #670a00;
+  --color-on-tertiary-container: #ff694e;
+  --color-tertiary-fixed: #ffdad3;
+  --color-tertiary-fixed-dim: #ffb4a5;
+  --color-on-tertiary-fixed: #3f0400;
+  --color-on-tertiary-fixed-variant: #8f1100;
+
+  --color-surface: #f2fcf3;
+  --color-surface-dim: #d2ddd4;
+  --color-surface-bright: #f2fcf3;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #ecf6ee;
+  --color-surface-container: #e6f0e8;
+  --color-surface-container-high: #e1ebe2;
+  --color-surface-container-highest: #dbe5dd;
+  --color-surface-variant: #dbe5dd;
+  --color-on-surface: #151d19;
+  --color-on-surface-variant: #414844;
+  --color-inverse-surface: #29322d;
+  --color-inverse-on-surface: #e9f3eb;
+
+  --color-outline: #717973;
+  --color-outline-variant: #c1c8c2;
+  --color-background: #f2fcf3;
+  --color-on-background: #151d19;
+  --color-surface-tint: #3f6653;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f2fcf3;
+    color: #151d19;
+    font-family: var(--font-sans);
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Material Symbols Outlined Font Variation Settings */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom Typography Utility Aliases */
+.font-display-lg {
+  font-family: var(--font-serif);
+}
+
+.font-headline {
+  font-family: var(--font-serif);
+}
+
+/* Marquee Animations */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Scrollbar Styling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Print styles for export price list / proforma */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

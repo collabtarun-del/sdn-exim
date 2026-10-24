@@ -1,0 +1,8 @@
+{
+  "name": "Remix SDN EXIM - Sovereign Spice \u0026 Agricultural Commodity Portal",
+  "description": "Authoritative B2B agricultural commodity trade portal for Indian export-grade spices, basmati rice, red onions, garlic, and herbs. Features live mandi pricing, container FOB/CIF quote generator, laboratory COA specs, and direct farm-to-port logistics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
